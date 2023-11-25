@@ -287,4 +287,5 @@ searchButton.addEventListener("click", () => {
   const searchQuery = searchvalue.value;
   localStorage.setItem("searchQuery", searchQuery);
   handleFilters();
+  searchvalue.value = "";
 });

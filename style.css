@@ -119,7 +119,7 @@
 
 /* search box */
 .searchContainer{
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .searchBox{
     width: 100%;
@@ -128,7 +128,7 @@
     justify-content: flex-start;
     align-items: center;
     height: 30px;
-    margin-top: 15px;
+    margin-top: 30px;
     
 }
 .searchContainer h3{
@@ -138,7 +138,7 @@
 .searchBox input{
     width: 95%;
     padding: 3px 20px;
-    height: 40px;
+    height: 50px;
     background-color: rgb(236, 230, 230);
     border: none;
     border-top-left-radius: 5px;
@@ -150,8 +150,8 @@
     outline: none;
 }
 .searchBox button {
-    height: 40px;
-    width: 50px;
+    height: 50px;
+    width: 70px;
     background-color: rgb(18, 137, 24);
     border: none;
     border-top-right-radius: 5px;

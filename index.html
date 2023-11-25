@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="nav">
+      <div class="topNav">
+        <div class="leftNav">
+          <span class="material-icons" id="menu"> menu </span>
+          <img src="./resourse/Cookpal 1.png" alt="icon" />
+        </div>
+        <div class="rightNav">
+          <ul>
+            <li>Home</li>
+            <li>Explore</li>
+            <li>Help</li>
+            <li><img src="./resourse/Ellipse 2.png" alt="profile" /></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sideBar">
+        <div class="sideBarTop">
+          <div class="icon">
+            <img src="./resourse/Cookpal 1.png" alt="icon" />
+          </div>
+          <div class="profile">
+            <img src="./resourse/Ellipse 2.png" alt="profile" />
+          </div>
+          <div>
+            <span class="material-icons" id="close"> close </span>
+          </div>
+        </div>
+        <div class="sidebarBottom">
+          <ul>
+            <li>Home</li>
+            <li>Explore</li>
+            <li>Help</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="hero">
+        <div class="heroContent">
+          <h3>Trending Now</h3>
+          <h1>Mike Famous salad with cheese</h1>
+          <p>By John Mike</p>
+        </div>
+      </div>
+
+      <div class="searchContainer">
+        <h3>Search recipes</h3>
+        <div class="searchBox">
+          <input
+            type="text"
+            id="searchtext"
+            name="seacrhText"
+            placeholder="Search for recipes" />
+          <button>
+            <span class="material-icons"> search </span>
+          </button>
+        </div>
+
+        <div class="searchButtonContainer">
+          <button id="all" , class="sBtn">All Recipes ></button>
+          <button id="veg" , class="sBtn">Veg Recipes Only ></button>
+          <button id="non-veg" , class="sBtn">Non Veg Recipes ></button>
+        </div>
+      </div>
+
+      <div class="productConatiner">
+        <div class="ratingCheckBox">
+          <h3>Filter</h3>
+          <div class="rating">
+            <div>
+              <input
+                type="radio"
+                value="4.5"
+                id="fourOrFiveStar"
+                name="rating" />
+              <label for="fourOrFiveStar">4 or above</label>
+            </div>
+            <div>
+              <input type="radio" value="4" id="belowFourStar" name="rating" />
+              <label for="belowFourStar">Below 4</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="productList">
+          <!-- <div class="product">
+            <div class="pImg">
+              <img src="./resourse/rounded.png" alt="product" />
+            </div>
+            <p id="type">Veg</p>
+            <div class="name">
+              <div class="nameAndRating">
+                <h3>Butter chicken</h3>
+                <p><span class="material-icons star"> star </span>4.5</p>
+              </div>
+              <div class="deliveryAndLike">
+                <h4>40min</h4>
+                <span class="material-icons liked"> favorite </span>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

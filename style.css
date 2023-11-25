@@ -1,0 +1,305 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#menu,#close{
+    display: none;
+}
+
+/* side bar */
+.nav{
+    width: 95%;
+    margin-inline: auto;
+}
+.sideBar{
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+    gap: 12px;
+    top: 0px;
+    left: -400px;
+    transition: all 1.2s ease-in-out;
+    box-shadow: 0px 2px 3px gray;
+
+}
+.sideBarTop{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.sidebarBottom{
+    display: flex;
+    flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-top: 30px;
+        margin-left: 50px;
+}
+
+.sidebarBottom ul{
+    list-style: none;
+}
+.sidebarBottom ul li{
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* nav bar */
+
+.topNav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.rightNav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+   
+}
+.leftNav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+/* main section for widht */
+
+.main{
+    width: 90%;
+    margin-inline: auto;
+    margin-block: 50px;
+
+}
+
+/* hero section */
+
+.hero{
+    background-image: url(./resourse/Rectangle\ 20.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.heroContent{
+    width: 300px;
+    margin-left: 60px;
+    line-height: 40px;
+    color: white;
+
+}
+.heroContent h3{
+    font-weight: 300;
+    color: orange;
+}
+
+/* search box */
+.searchContainer{
+    margin-top: 20px;
+}
+.searchBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30px;
+    margin-top: 15px;
+    
+}
+.searchContainer h3{
+    font-weight: 600;
+    color: rgb(35, 34, 34);
+}
+.searchBox input{
+    width: 95%;
+    padding: 3px 20px;
+    height: 40px;
+    background-color: rgb(236, 230, 230);
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px
+    
+}
+
+.searchBox input:focus{
+    outline: none;
+}
+.searchBox button {
+    height: 40px;
+    width: 50px;
+    background-color: rgb(18, 137, 24);
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    font-size: 20px;
+}
+
+.searchButtonContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sBtn{
+    padding: 25px 40px;
+    margin-right: 30px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#all{
+    background-color: #EAAA00;
+}
+#veg{
+    background-color: #C4D600;
+}
+#non-veg{
+    background-color: #DC582A;
+}
+
+.like-icon {
+    cursor: pointer;
+}
+
+.liked {
+    color: red;
+}
+
+
+
+/* rating box */
+.productConatiner {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.ratingCheckBox{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+   
+}
+.rating{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 40px;
+    gap: 15px;
+}
+
+.productList{
+    flex: 4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.product{
+    width: 250px;
+    box-shadow: 0px 0px 1px rgb(167, 165, 165);
+    border-radius: 6px;
+    padding: 6px;
+    overflow: hidden;
+
+
+}
+.pImg>img{
+    width: 240px;
+    height: 180px;
+    margin-inline:auto;
+    border-radius: 6px;
+}
+
+.nameAndRating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#type{
+    font-size: 10px;
+    font-weight: 200;
+}
+
+.nameAndRating p{
+    display: flex;
+    align-items: center;
+}
+.star{
+    color: #FDC040;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.deliveryAndLike{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.deliveryAndLike h4{
+    color: #DC582A;
+    font-weight: 200;
+}
+
+@media only screen and (max-width:720px) {
+    #menu {
+        display: block;
+    }
+
+    #close {
+        display: block;
+    }
+
+    .rightNav {
+        display: none;
+    }
+
+    .sideBar {
+        width: 300px;
+        gap: 6px;
+
+    }
+  .product {
+    width: 200px;
+
+   }
+ .pImg>img {
+     width: 190px;
+     height: 145px;
+   
+ }
+}

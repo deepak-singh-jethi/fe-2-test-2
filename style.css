@@ -279,6 +279,7 @@
 /* footer */
 
 footer {
+    margin-top: 90px;
     background-color: #ffffff;
     padding: 20px;
 }
@@ -290,6 +291,7 @@ footer {
     align-items: flex-start;
     flex-wrap:wrap;
     gap: 30px;
+        margin-inline: 40px
 }
 
 
@@ -340,6 +342,7 @@ footer li {
 
 /* socail links */
  .social-links {
+    margin-top: 60px;
      background-color: #333;
      color: #fff;
      padding: 10px;

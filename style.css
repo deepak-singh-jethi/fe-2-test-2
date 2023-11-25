@@ -275,6 +275,86 @@
     font-weight: 200;
 }
 
+
+/* footer */
+
+footer {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap:wrap;
+    gap: 30px;
+}
+
+
+.footer-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 10px;
+    gap: 20px;
+}
+
+
+.company-logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer li {
+    margin: 15px 0;
+}
+
+.subscribe-form{
+   width: 100%;
+   display: flex;
+   gap: 10px;
+  
+}
+
+.subscribe-form button{
+    height: 30px;
+    padding: 5px 10px;
+    background-color: #509E2F;
+    border: none;
+    cursor: pointer;
+}
+
+.subscribe-form input{
+    height: 30px;
+}
+
+/* socail links */
+ .social-links {
+     background-color: #333;
+     color: #fff;
+     padding: 10px;
+     text-align: center;
+ }
+
+ /* Styling for the individual social link icons */
+ .social-link {
+     display: inline-block;
+     margin: 0 10px;
+     font-size: 24px;
+     color: #fff;
+     text-decoration: none;
+ }
+
 @media only screen and (max-width:720px) {
     #menu {
         display: block;
@@ -302,4 +382,17 @@
      height: 145px;
    
  }
+
+ .productConatiner {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.rating {
+   
+    flex-direction: row;
+  margin-bottom: 30px;
+}
 }

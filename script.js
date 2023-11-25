@@ -187,21 +187,13 @@ function printProducts(products) {
   });
 }
 printProducts(products);
-/*  {
-    name: "Veggie Delight",
-    imageSrc: "https://source.unsplash.com/random?veggies",
-    time: "30 min",
-    type: "veg",
-    isLiked: false,
-    rating: 4.2,
-  }, */
 
 window.onload = () => {
   localStorage.clear();
   localStorage.setItem("filteredProducts", JSON.stringify(products));
 };
-//print products based on buttons
 
+// all filter methods using local storage
 const filterMethods = {
   all: (products) => products,
   veg: (products) => {
@@ -239,6 +231,7 @@ const filterMethods = {
   },
 };
 
+// handling all the filters
 const handleFilters = () => {
   const foodType = localStorage.getItem("foodType") || "all";
   const foodRating = localStorage.getItem("foodRating") || "";
@@ -274,10 +267,9 @@ nonvegBtn.addEventListener("click", () => {
 //print products based on rating
 radioButtons.forEach(function (ratingButton) {
   ratingButton.addEventListener("change", function () {
-    // Loop through radio buttons to find the selected one
     radioButtons.forEach(function (button) {
       if (button.checked) {
-        const inputvalue = button.value;
+        // const inputvalue = button.value;
         if (button.value === "4.5") {
           localStorage.setItem("foodRating", "above");
           handleFilters();
@@ -290,8 +282,7 @@ radioButtons.forEach(function (ratingButton) {
   });
 });
 
-// search recipes button
-
+// search item
 searchButton.addEventListener("click", () => {
   const searchQuery = searchvalue.value;
   localStorage.setItem("searchQuery", searchQuery);

@@ -145,7 +145,18 @@ const radioButtons = document.querySelectorAll('input[name="rating"]');
 const searchButton = document.querySelector(".searchBox button");
 const searchvalue = document.querySelector(".searchBox input");
 
-const handleLikeClick = (product) => {};
+const handleLikeClick = (productName) => {
+  console.log(productName);
+  let products = localStorage.getItem("filteredProducts");
+  products = JSON.parse(products);
+  products.forEach((product) => {
+    if (product.name === productName) {
+      product.isLiked = !product.isLiked;
+    }
+  });
+  printProducts(products);
+  localStorage.setItem("filteredProducts", JSON.stringify(products));
+};
 
 function printProducts(products) {
   productList.innerHTML = "";
@@ -153,6 +164,8 @@ function printProducts(products) {
     const item = document.createElement("div");
     const { name, type, time, imageSrc, rating, isLiked } = product;
     item.className = "product";
+
+    console.log(name);
 
     item.innerHTML = ` <div class="pImg">
               <img src="${imageSrc}" alt="${name}" />
@@ -167,10 +180,9 @@ function printProducts(products) {
                 <h4>${time}</h4>
                 <span class="material-icons like-icon ${
                   isLiked ? "liked" : ""
-                }" onClick={handleLikeClick}> favorite </span>
+                }" id=${name} onclick="handleLikeClick('${name}')"> favorite </span>
               </div>
             </div>`;
-
     productList.appendChild(item);
   });
 }
@@ -186,6 +198,7 @@ printProducts(products);
 
 window.onload = () => {
   localStorage.clear();
+  localStorage.setItem("filteredProducts", JSON.stringify(products));
 };
 //print products based on buttons
 
@@ -239,7 +252,7 @@ const handleFilters = () => {
   if (searchQuery) {
     filteredProducts = filterMethods.search(filteredProducts, searchQuery);
   }
-
+  localStorage.setItem("filteredProducts", JSON.stringify(filteredProducts));
   printProducts(filteredProducts);
 };
 
